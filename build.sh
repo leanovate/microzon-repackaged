@@ -31,7 +31,6 @@ mkdir -p "$TARGET/consul/opt/consul"
 /usr/bin/fakeroot /usr/bin/dpkg-deb -b "$TARGET/consul" "$TARGET/consul.deb"
 /usr/bin/curl -T "$TARGET/consul.deb" -u$BINTRAY_USER:$BINTRAY_KEY "https://api.bintray.com/content/untoldwind/deb/microzon/$VERSION/pool/main/m/microzon/consul-${consul_version}-1_amd64.deb;deb_distribution=trusty;deb_component=main;deb_architecture=1_amd64?publish=1"
 
-gem install --version 0.99.5 mustache
 gem install --user-install pleaserun fpm
 
 PATH=$PATH:$(ruby -rubygems -e 'puts Gem.user_dir')/bin
