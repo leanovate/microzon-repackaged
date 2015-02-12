@@ -34,3 +34,5 @@ mkdir -p "$TARGET/consul/opt/consul"
 gem install pleaserun fpm
 
 (cd logstash-forwarder; make deb)
+
+/usr/bin/curl -T logstash-forwarder/logstash-forwarder_0.4.0_amd64.deb -u$BINTRAY_USER:$BINTRAY_KEY "https://api.bintray.com/content/untoldwind/deb/microzon/$VERSION/pool/main/m/microzon/logstash-forwarder_0.4.0_amd64.deb;deb_distribution=trusty;deb_component=main;deb_architecture=1_amd64?publish=1"
