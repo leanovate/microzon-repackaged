@@ -1,0 +1,3 @@
+[submodule "logstash-forwarder"]
+	path = logstash-forwarder
+	url = https://github.com/elasticsearch/logstash-forwarder.git
